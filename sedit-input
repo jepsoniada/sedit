@@ -1,1 +1,4 @@
 #!/usr/bin/env sh
+$seditdir/sedit-base $4 "$2$1\\
+$3\\
+"
