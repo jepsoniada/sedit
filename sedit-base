@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
-sed "$@" $file > $seditdir/tmp \
-&& cat $seditdir/tmp | $seditdir/sedit-undo-history | $seditdir/sedit-save | $seditdir/sedit-log
+rm $seditdir/tmp 2> /dev/null
+sed "$@" $file 1> /dev/null && sed "$@" $file > $seditdir/tmp
+test -f $seditdir/tmp && cat $seditdir/tmp | $seditdir/sedit-undo-history | $seditdir/sedit-save | $seditdir/sedit-log
