@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+cat - > $seditdir/tmp-s
+cat $seditdir/tmp-s > $file
+cat $file

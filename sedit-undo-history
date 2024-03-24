@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+cat - > $seditdir/tmp-u
+mkdir -p $seditdir/history
+diff -c $file $seditdir/tmp-u > $seditdir/history/$(
+date +%s \
+| cat - $file \
+| md5sum \
+| cut -d ' ' -f 1
+)
+cat $seditdir/tmp-u

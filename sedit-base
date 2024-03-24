@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+sed "$@" $file > $seditdir/tmp \
+&& cat $seditdir/tmp | $seditdir/sedit-undo-history | $seditdir/sedit-save | $seditdir/sedit-log

@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+$seditdir/sedit-base $3 "$2$1"

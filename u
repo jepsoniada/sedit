@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+export patch=$seditdir/history/$(
+ls -t $seditdir/history \
+| head -1
+)
+patch -Rs --dry-run $file $patch \
+&& patch -Rs $file $patch  \
+&& rm $patch
+cat $file | sedit-log

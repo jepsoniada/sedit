@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+$seditdir/sedit-base $6 "$2$1$delim$3$delim$4$delim$5"
